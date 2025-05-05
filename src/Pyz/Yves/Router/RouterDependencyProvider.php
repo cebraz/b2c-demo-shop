@@ -9,6 +9,7 @@ declare(strict_types = 1);
 
 namespace Pyz\Yves\Router;
 
+use Pyz\Yves\AntelopePage\Plugin\Router\AntelopePageRouteProviderPlugin;
 use Pyz\Yves\ExampleProductSalePage\Plugin\Router\ExampleProductSaleRouteProviderPlugin;
 use Spryker\Yves\CustomerDataChangeRequest\Plugin\Router\CustomerDataChangeRequestRouteProviderPlugin;
 use Spryker\Yves\HealthCheck\Plugin\Router\HealthCheckRouteProviderPlugin;
@@ -132,6 +133,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new ProductComparisonPageRouteProviderPlugin(),
             new PaymentAppWidgetRouteProviderPlugin(),
             new CustomerDataChangeRequestRouteProviderPlugin(),
+            new AntelopePageRouteProviderPlugin(),
         ];
     }
 
