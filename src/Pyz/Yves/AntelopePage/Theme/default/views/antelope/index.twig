@@ -1,0 +1,32 @@
+{% extends template('page-blank') %}
+
+{% define data = {
+    antelopes: _view.antelopes
+} %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>
+            <th>ID Antelope</th>
+            <th>Name Antelope</th>
+            <th>Color Antelope</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for antelope in data.antelopes %}
+            <tr>
+                <td>{{ antelope.idAntelope }}</td>
+                <td>{{ antelope.name }}</td>
+                <td>{{ antelope.color }}</td>
+                <td>{{ antelope.location.locationName }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">No antelopes found.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

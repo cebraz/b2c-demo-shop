@@ -6,7 +6,8 @@
     <transfer name="Antelope">
         <property name="idAntelope" type="int"/>
         <property name="name" type="string"/>
-        <property name="locationId" type="int"/>
+        <property name="color" type="string"/>
+        <property name="location" type="AntelopeLocation"/>
     </transfer>
 
     <transfer name="AntelopeCriteria">
@@ -23,5 +24,14 @@
     <transfer name="AntelopeLocation">
         <property name="locationId" type="int"/>
         <property name="locationName" type="string"/>
+    </transfer>
+
+    <transfer name="AntelopeCollection">
+        <property name="antelopes" type="Antelope[]" singular="antelope"/>
+    </transfer>
+
+    <transfer name="AntelopeCollectionResponse">
+        <property name="antelopes" type="Antelope[]"/>
+        <property name="isSuccessful" type="bool"/>
     </transfer>
 </transfers>
