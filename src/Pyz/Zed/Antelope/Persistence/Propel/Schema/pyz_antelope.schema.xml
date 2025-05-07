@@ -17,8 +17,10 @@
     </table>
 
     <table name="pyz_antelope_location" idMethod="native" allowPkInsert="true" phpName="PyzAntelopeLocation">
-        <column name="id_location" required="true" type="INTEGER" autoIncrement="true"/>
+        <column name="id_location" required="true" type="INTEGER" primaryKey="true" autoIncrement="true"/>
         <column name="location_name" required="true" type="VARCHAR" size="120"/>
+        <column name="latitude" required="false" type="VARCHAR" size="100"/>
+        <column name="longitude" required="false" type="VARCHAR" size="100"/>
         <unique name="pyz_antelope_location-name">
             <unique-column name="location_name"/>
         </unique>
